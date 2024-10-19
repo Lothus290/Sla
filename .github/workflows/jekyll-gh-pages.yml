@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa Romântica</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .photo-container {
+            width: 350px;
+            height: auto;
+            background-color: #ddd;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo-container img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .romantic-phrase {
+            font-size: 1.5em;
+            text-align: center;
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 15px 25px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: red;
+            opacity: 0.8;
+            clip-path: polygon(50% 0%, 61% 19%, 81% 19%, 91% 34%, 84% 56%, 50% 100%, 16% 56%, 9% 34%, 19% 19%, 39% 19%);
+            animation: floatDown 8s infinite ease-in-out;
+        }
+
+        @keyframes floatDown {
+            0% {
+                transform: translateY(-50vh) translateX(0) scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(50vh) translateX(20vw) scale(1.2);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(100vh) translateX(-20vw) scale(1);
+                opacity: 0;
+            }
+        }
+
+        .heart:nth-child(odd) {
+            background: #ff5f6d;
+            animation-duration: 7s;
+        }
+
+        .heart:nth-child(even) {
+            background: #ff9a9e;
+            animation-duration: 9s;
+        }
+    </style>
+</head>
+<body>
+    <div class="photo-container">
+        <!-- Substitua 'IMG-20241018-WA0002.jpg' pelo caminho da sua foto -->
+        <img src="IMG-20241018-WA0002.jpg" alt="Imagem da oficina">
+    </div>
+    <div class="romantic-phrase">
+        "Você faz meu coração flutuar como esses corações, leve e cheio de amor."
+    </div>
+
+    <!-- Corações em movimento -->
+    <div class="hearts">
+        <!-- Gerando vários corações para animação -->
+        <div class="heart" style="left: 10%;"></div>
+        <div class="heart" style="left: 30%;"></div>
+        <div class="heart" style="left: 50%;"></div>
+        <div class="heart" style="left: 70%;"></div>
+        <div class="heart" style="left: 90%;"></div>
+    </div>
+</body>
+</html>
